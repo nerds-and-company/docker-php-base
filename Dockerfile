@@ -14,6 +14,14 @@ RUN apt-get install -y curl git
 RUN apt-get install -y libmcrypt4 libmcrypt-dev \
  && docker-php-ext-install mcrypt
 
+RUN pecl install xdebug
+
+# Some default php configuration
+WORKDIR /usr/local/etc/php/conf.d
+COPY php-conf.d .
+RUN echo 'date.timezone = Europe/Amsterdam' >> date.ini
+ENV DBGP_IDEKEY XDEBUG
+
 # Install gd
 RUN apt-get install -y libfreetype6-dev libjpeg-dev libpng12-dev --no-install-recommends \
  && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
