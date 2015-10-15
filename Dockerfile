@@ -20,7 +20,7 @@ RUN apt-get install -y libfreetype6-dev libjpeg-dev libpng12-dev --no-install-re
  && docker-php-ext-install gd
 
 # Install other needed extensions
-RUN docker-php-ext-install mbstring pdo_mysql zip bz2
+RUN docker-php-ext-install mbstring pdo_mysql zip
 
 # Enable mod_rewrite
 RUN a2enmod rewrite

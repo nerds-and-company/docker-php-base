@@ -18,7 +18,6 @@ Itmundi PHP image for Docker
  - gd
  - pdo_mysql
  - zip
- - bz2
 
 ### Other
  - Contains git
