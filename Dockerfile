@@ -44,3 +44,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Change PATH to include composer bin files
 ENV PATH vendor/bin:$PATH
+
+# Set work dir to the webroot (not sure why, but that's where I did end up first when I opened a connection)
+WORKDIR /var/www/html
