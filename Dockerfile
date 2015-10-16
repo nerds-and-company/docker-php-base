@@ -7,8 +7,10 @@ ENV COMPOSER_VERSION 1.0.0-alpha10
 # Update apt
 RUN apt-get update
 
-# Install curl and git
-RUN apt-get install -y curl git
+# Install curl, git, and all locales
+RUN apt-get install -y curl git locales
+RUN sed -i -E "s/# (.*)_(.*)/\1_\2/" /etc/locale.gen
+RUN locale-gen
 
 # Install mcrypt
 RUN apt-get install -y libmcrypt4 libmcrypt-dev \
