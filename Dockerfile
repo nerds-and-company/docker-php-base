@@ -1,5 +1,5 @@
 FROM php:5.6-apache
-MAINTAINER Arjan Kleene <a.kleene@itmundi.nl>
+MAINTAINER Arjan Kleene <a.kleene@nerds.company>
 
 # Set env
 ENV COMPOSER_VERSION 1.0.0-alpha10

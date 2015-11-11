@@ -1,5 +1,5 @@
-# itmundi/php
-Itmundi PHP image for Docker
+# nerdsandcompany/php
+Nerds and Company PHP image for Docker
 
 ## Contains
 
