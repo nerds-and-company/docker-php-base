@@ -1,4 +1,4 @@
-# nerdsandcompany/php
+# nerdsandcompany/php-base
 Nerds and Company PHP image for Docker
 
 ## Contains
