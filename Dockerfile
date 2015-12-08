@@ -49,3 +49,5 @@ ENV PATH vendor/bin:$PATH
 
 # Set work dir to the webroot (not sure why, but that's where I did end up first when I opened a connection)
 WORKDIR /var/www/html
+
+CMD ["apachectl -D FOREGROUND"]
