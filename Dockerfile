@@ -50,4 +50,4 @@ ENV PATH vendor/bin:$PATH
 # Set work dir to the webroot (not sure why, but that's where I did end up first when I opened a connection)
 WORKDIR /var/www/html
 
-CMD ["/usr/sbin/apachectl -D FOREGROUND"]
+CMD /usr/sbin/apache2ctl -D FOREGROUND
