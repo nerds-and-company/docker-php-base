@@ -1,8 +1,8 @@
 FROM php:5.6-apache
-MAINTAINER Arjan Kleene <a.kleene@nerds.company>
+MAINTAINER Bob Olde Hampsink <b.oldehampsink@nerds.company>
 
 # Set env
-ENV COMPOSER_VERSION 1.0.0-alpha10
+ENV COMPOSER_VERSION 1.2.1
 
 # Update apt
 RUN apt-get update
