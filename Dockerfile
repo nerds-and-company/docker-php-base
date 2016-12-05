@@ -1,8 +1,8 @@
-FROM php:5.6-apache
+FROM php:7.0-apache
 MAINTAINER Bob Olde Hampsink <b.oldehampsink@nerds.company>
 
 # Set env
-ENV COMPOSER_VERSION 1.2.2
+ENV COMPOSER_VERSION 1.2.3
 
 # Update apt
 RUN apt-get update
