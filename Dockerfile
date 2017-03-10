@@ -2,7 +2,7 @@ FROM php:7.0-apache
 MAINTAINER Bob Olde Hampsink <b.oldehampsink@nerds.company>
 
 # Set env
-ENV COMPOSER_VERSION 1.2.4
+ENV COMPOSER_VERSION 1.4.0
 
 # Update apt
 RUN apt-get update
