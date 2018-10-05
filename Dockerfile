@@ -25,7 +25,7 @@ RUN echo 'date.timezone = Europe/Amsterdam' >> date.ini
 ENV DBGP_IDEKEY XDEBUG
 
 # Install gd
-RUN apt-get install -y libfreetype6-dev libjpeg-dev libpng12-dev --no-install-recommends \
+RUN apt-get install -y libfreetype6-dev libjpeg-dev libpng-dev --no-install-recommends \
  && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
  && docker-php-ext-install gd
 

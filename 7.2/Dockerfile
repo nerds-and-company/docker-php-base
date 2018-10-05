@@ -12,18 +12,21 @@ RUN apt-get install -y curl git locales
 RUN sed -i -E "s/# (.*)_(.*)/\1_\2/" /etc/locale.gen
 RUN locale-gen
 
-RUN pecl install xdebug mcrypt
+RUN pecl install xdebug
 
 # Some default php configuration
 WORKDIR /usr/local/etc/php/conf.d
 COPY php-conf.d .
-RUN echo 'date.timezone = Europe/Amsterdam' >> date.ini
 ENV DBGP_IDEKEY XDEBUG
 
 # Install gd
 RUN apt-get install -y libfreetype6-dev libjpeg-dev --no-install-recommends \
  && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
  && docker-php-ext-install gd
+
+# Install mcrypt
+RUN apt-get install -y libmcrypt-dev
+RUN pecl install mcrypt-1.0.1
 
 # Install other needed extensions
 RUN docker-php-ext-install mbstring pdo_mysql zip
