@@ -19,7 +19,7 @@ COPY php-conf.d .
 ENV DBGP_IDEKEY XDEBUG
 
 # Install gd
-RUN apt-get install -y libfreetype6-dev libjpeg-dev --no-install-recommends \
+RUN apt-get install -y libfreetype6-dev libjpeg-dev libzip-dev --no-install-recommends \
  && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
  && docker-php-ext-install gd
 
