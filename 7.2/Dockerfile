@@ -35,7 +35,7 @@ RUN docker-php-ext-install mbstring pdo_mysql zip
 RUN a2enmod rewrite
 
 # Install mysql client
-RUN apt-get install -y mysql-client
+RUN apt-get install -y mariadb-client
 
 # Install redis tools
 RUN apt-get install -y redis-tools
